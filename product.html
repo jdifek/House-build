@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House-build - Товар</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-slate-900 text-white">
+      <div class="bg-slate-800 py-2 px-4">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <div
+            class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-2 md:space-y-0"
+          >
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-phone w-4 h-4 text-orange-500"></i>
+              <span>+38 (067) 464 88 13</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt w-4 h-4 text-orange-500"></i>
+              <span>Київ, вул. Латошинського 4а/289</span>
+            </div>
+          </div>
+          <div class="mt-2 md:mt-0">
+            <span class="text-gray-300">Працюємо: Пн-Пт 8:00-18:00</span>
+          </div>
+        </div>
+      </div>
+      <nav class="px-4 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <div class="text-2xl font-bold">House-build</div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors"
+            >
+              Магазин
+            </button>
+          </div>
+          <button id="mobile-menu-button" class="md:hidden p-2">
+            <i id="menu-icon" class="fas fa-bars w-6 h-6"></i>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-slate-700"
+        >
+          <div class="flex flex-col space-y-4 pt-4">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors w-fit"
+            >
+              Магазин
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Product -->
+    <section id="product" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="mb-12">
+          <nav class="text-sm text-gray-600">
+            <a href="index.html" class="hover:text-orange-500">Головна</a> /
+            <a href="categories.html" class="hover:text-orange-500"
+              >Категорії</a
+            >
+            /
+            <a id="category-link" href="#" class="hover:text-orange-500"
+              >Категорія</a
+            >
+            /
+            <span id="product-name">Товар</span>
+          </nav>
+        </div>
+        <div id="product-content" class="grid lg:grid-cols-2 gap-12">
+          <!-- Product content will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended Products -->
+    <section id="recommended" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">
+          Рекомендовані товари
+        </h2>
+        <div id="recommended-products" class="grid md:grid-cols-4 gap-6">
+          <!-- Recommended products will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="order-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+    >
+      <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-lg">
+        <div class="flex justify-between items-center border-b pb-2">
+          <h2 class="text-xl font-bold text-slate-900">Залишити заявку</h2>
+          <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <p class="text-gray-600 mt-4">
+          Заповніть контактні дані й наш спеціаліст зв’яжеться з вами найближчим
+          часом
+        </p>
+        <form class="mt-4 space-y-4">
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              placeholder="Ваше ім’я"
+              class="w-1/2 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <input
+              type="tel"
+              placeholder="+380"
+              class="w-1/2 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Ваше місто/населений пункт"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <textarea
+            placeholder="Напишіть коментар"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 h-20"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg transition-colors"
+          >
+            Надіслати
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold mb-4">House-build</div>
+            <p class="text-gray-300 mt-4 mb-6">
+              Професійне будівництво та продаж матеріалів з 1999 року.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 ml-1 fa-facebook-f w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 fa-instagram w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-2 fa-linkedin-in w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Послуги</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="construction.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Будівництво під ключ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Ремонтні роботи</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Проектування</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Матеріали</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="category.html?category=metal-tile"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Металочерепиця</a
+                >
+              </li>
+              <li>
+                <a
+                  href="category.html?category=profile-sheet"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Профнастил</a
+                >
+              </li>
+              <li>
+                <a
+                  href="category.html?category=folding-roof"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Фальцева покрівля</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Контакти</h3>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone w-5 h-5 text-orange-500"></i>
+                <div>
+                  <p class="text-gray-300">+38 (067) 464 88 13</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope w-5 h-5 text-orange-500"></i>
+                <p class="text-gray-300">info@house-build.com.ua</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fas fa-map-marker-alt w-5 h-5 text-orange-500 mt-1"
+                ></i>
+                <p class="text-gray-300">Київ, вул. Латошинського 4а/289</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2024 House-build Company. Всі права захищені.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Політика конфіденційності</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Умови використання</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", () => {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuIcon = document.getElementById("menu-icon");
+          mobileMenu.classList.toggle("hidden");
+          menuIcon.classList.toggle("fa-bars");
+          menuIcon.classList.toggle("fa-times");
+        });
+
+      // Function to initialize modal and product content
+      function initPage() {
+        // Mock data for categories and products
+        const categories = {
+          "metal-tile": {
+            name: "Металочерепиця",
+            products: [
+              {
+                id: "monterrey-tile",
+                name: "Металочерепиця Монтеррей",
+                description:
+                  "Товщина: 0.45-0.5 мм. Покриття: поліестер. Гарантія: 10 років.",
+                price: "від 250 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "metal-tile",
+                dimensions: [
+                  { width: 350, height: 200, length: 600 },
+                  { width: 300, height: 150, length: 500 },
+                ],
+                colors: [
+                  "bg-[#5D8AA8]", // RAL 6005
+                  "bg-[#8A9A5B]", // RAL 6002
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+              {
+                id: "classic-tile",
+                name: "Металочерепиця Класик",
+                description:
+                  "Товщина: 0.5 мм. Покриття: матовий поліестер. Гарантія: 15 років.",
+                price: "від 300 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/5792615/pexels-photo-5792615.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "metal-tile",
+                dimensions: [
+                  { width: 360, height: 210, length: 620 },
+                  { width: 310, height: 160, length: 510 },
+                ],
+                colors: [
+                  "bg-[#355E3B]", // RAL 6020
+                  "bg-[#4A2C2A]", // RAL 3006
+                  "bg-[#6B7280]", // RAL 7016
+                  "bg-[#8B4513]", // RAL 8004
+                  "bg-[#5C4033]", // RAL 8017
+                ],
+              },
+              {
+                id: "venus-tile",
+                name: "Металочерепиця Венера",
+                description:
+                  "Товщина: 0.5 мм. Покриття: пурал. Гарантія: 20 років.",
+                price: "від 350 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/5792678/pexels-photo-5792678.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "metal-tile",
+                dimensions: [
+                  { width: 370, height: 220, length: 640 },
+                  { width: 320, height: 170, length: 520 },
+                ],
+                colors: [
+                  "bg-[#4B5D67]", // RAL 7024
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+            ],
+          },
+          "profile-sheet": {
+            name: "Профнастил",
+            products: [
+              {
+                id: "ps-10",
+                name: "Профнастил ПС-10",
+                description:
+                  "Товщина: 0.4 мм. Висота хвилі: 10 мм. Покриття: цинк.",
+                price: "від 180 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "profile-sheet",
+                dimensions: [
+                  { width: 250, height: 100, length: 400 },
+                  { width: 200, height: 80, length: 350 },
+                ],
+                colors: [
+                  "bg-[#5D8AA8]", // RAL 6005
+                  "bg-[#355E3B]", // RAL 6020
+                  "bg-[#8A9A5B]", // RAL 6002
+                  "bg-[#4A2C2A]", // RAL 3006
+                ],
+              },
+              {
+                id: "pk-20",
+                name: "Профнастил ПК-20",
+                description:
+                  "Товщина: 0.45 мм. Висота хвилі: 20 мм. Покриття: поліестер.",
+                price: "від 200 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/206673/pexels-photo-206673.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "profile-sheet",
+                dimensions: [
+                  { width: 260, height: 110, length: 420 },
+                  { width: 210, height: 90, length: 370 },
+                ],
+                colors: [
+                  "bg-[#6B7280]", // RAL 7016
+                  "bg-[#4B5D67]", // RAL 7024
+                  "bg-[#8B4513]", // RAL 8004
+                  "bg-[#5C4033]", // RAL 8017
+                ],
+              },
+              {
+                id: "pn-35",
+                name: "Профнастил ПН-35",
+                description:
+                  "Товщина: 0.5 мм. Висота хвилі: 35 мм. Покриття: матовий поліестер.",
+                price: "від 250 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/209662/pexels-photo-209662.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "profile-sheet",
+                dimensions: [
+                  { width: 270, height: 120, length: 440 },
+                  { width: 220, height: 100, length: 390 },
+                ],
+                colors: [
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+            ],
+          },
+          "folding-roof": {
+            name: "Фальцева покрівля",
+            products: [
+              {
+                id: "double-fold",
+                name: "Фальцева покрівля подвійний фалець",
+                description:
+                  "Товщина: 0.5 мм. Покриття: пурал. Гарантія: 20 років.",
+                price: "від 400 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "folding-roof",
+                dimensions: [
+                  { width: 290, height: 185, length: 560 },
+                  { width: 204, height: 99, length: 360 },
+                ],
+                colors: [
+                  "bg-[#5D8AA8]", // RAL 6005
+                  "bg-[#355E3B]", // RAL 6020
+                  "bg-[#8A9A5B]", // RAL 6002
+                  "bg-[#4A2C2A]", // RAL 3006
+                  "bg-[#6B7280]", // RAL 7016
+                  "bg-[#4B5D67]", // RAL 7024
+                  "bg-[#8B4513]", // RAL 8004
+                  "bg-[#5C4033]", // RAL 8017
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+              {
+                id: "click-fold",
+                name: "Фальцева покрівля клік-фалець",
+                description:
+                  "Товщина: 0.5 мм. Покриття: матовий поліестер. Гарантія: 15 років.",
+                price: "від 350 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/221028/pexels-photo-221028.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "folding-roof",
+                dimensions: [
+                  { width: 290, height: 185, length: 560 },
+                  { width: 204, height: 99, length: 360 },
+                ],
+                colors: [
+                  "bg-[#5D8AA8]", // RAL 6005
+                  "bg-[#355E3B]", // RAL 6020
+                  "bg-[#8A9A5B]", // RAL 6002
+                  "bg-[#4A2C2A]", // RAL 3006
+                  "bg-[#6B7280]", // RAL 7016
+                  "bg-[#4B5D67]", // RAL 7024
+                  "bg-[#8B4513]", // RAL 8004
+                  "bg-[#5C4033]", // RAL 8017
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+              {
+                id: "classic-fold",
+                name: "Фальцева покрівля класична",
+                description:
+                  "Товщина: 0.45 мм. Покриття: поліестер. Гарантія: 10 років.",
+                price: "від 300 грн/м²",
+                image:
+                  "https://images.pexels.com/photos/221029/pexels-photo-221029.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+                categoryId: "folding-roof",
+                dimensions: [
+                  { width: 290, height: 185, length: 560 },
+                  { width: 204, height: 99, length: 360 },
+                ],
+                colors: [
+                  "bg-[#5D8AA8]", // RAL 6005
+                  "bg-[#355E3B]", // RAL 6020
+                  "bg-[#8A9A5B]", // RAL 6002
+                  "bg-[#4A2C2A]", // RAL 3006
+                  "bg-[#6B7280]", // RAL 7016
+                  "bg-[#4B5D67]", // RAL 7024
+                  "bg-[#8B4513]", // RAL 8004
+                  "bg-[#5C4033]", // RAL 8017
+                  "bg-[#DAA520]", // RAL 1023
+                  "bg-[#F0F8FF]", // RAL 9003
+                  "bg-[#2F2F2F]", // RAL 9005
+                  "bg-[#D3D3D3]", // RAL 7004
+                ],
+              },
+            ],
+          },
+        };
+
+        // Get product from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("product") || "double-fold";
+
+        // Find product
+        let product = null;
+        let category = null;
+        for (const catId in categories) {
+          const foundProduct = categories[catId].products.find(
+            (p) => p.id === productId
+          );
+          if (foundProduct) {
+            product = foundProduct;
+            category = categories[catId];
+            break;
+          }
+        }
+
+        // Default product if not found
+        if (!product) {
+          product = categories["folding-roof"].products[0];
+          category = categories["folding-roof"];
+        }
+
+        // Update breadcrumbs
+        document.getElementById("category-link").textContent = category.name;
+        document.getElementById(
+          "category-link"
+        ).href = `category.html?category=${product.categoryId}`;
+        document.getElementById("product-name").textContent = product.name;
+
+        // Render product
+        const productContent = document.getElementById("product-content");
+        productContent.innerHTML = `
+          <div class="bg-white overflow-hidden">
+            <div class="h-96 bg-cover bg-center" style="background-image: url('${
+              product.image
+            }');"></div>
+            <div class="p-6">
+              ${
+                product.dimensions
+                  ? `
+                <div class="mb-6">
+                  <h3 class="text-xl font-bold text-slate-900 mb-2">Розміри</h3>
+                  ${product.dimensions
+                    .map(
+                      (dim) => `
+                    <div class="flex items-center space-x-4 mb-2">
+                      <svg class="w-full h-24" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="50" y1="250" x2="750" y2="250" stroke="black" stroke-width="2"/>
+                      <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>
+                      <line x1="750" y1="250" x2="750" y2="50" stroke="black" stroke-width="2"/>
+                      <text x="400" y="270" text-anchor="middle" font-size="14">${dim.length} мм</text>
+                      <text x="30" y="150" text-anchor="end" font-size="14">${dim.width} мм</text>
+                      <text x="770" y="150" text-anchor="start" font-size="14">${dim.height} мм</text>
+                      </svg>
+                    </div>
+                  `
+                    )
+                    .join("")}
+                </div>
+              `
+                  : ""
+              }
+              
+            </div>
+          </div>
+          <div class="bg-white  p-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">${
+              product.name
+            }</h2>
+            <p class="text-gray-600 text-lg mb-6">${product.description}</p>
+            <p class="text-2xl font-bold text-orange-500 mb-6">${
+              product.price
+            }</p>
+            
+            <div class="flex space-x-4 mb-4">
+              <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 add-to-cart">
+                <i class="fas fa-shopping-cart w-5 h-5"></i>
+                <span>Замовити</span>
+              </button>
+              
+              <button class="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2">
+                <i class="fas fa-info-circle w-5 h-5"></i>
+                <span>Детальніше</span>
+              </button>
+            </div>
+             <div class="flex space-x-2">
+              <div class="mb-6">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Палітра кольорів</h3>
+                  ${
+                    product.colors
+                      ? product.colors
+                          .map(
+                            (color) => `
+                    <button class="w-8 h-8 rounded-full ${color} border-2 border-white hover:border-orange-500 transition-colors"></button>
+                  `
+                          )
+                          .join("")
+                      : ""
+                  }
+              </div>
+               
+                </div>
+        
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 ">Опис продукту</h3>
+            <p class="text-gray-600 text-m col-span-2">Вона складається з металевых листвiв певної ширини, якi з'єднуються за допомогою спеціального інструменту. Завдяки цьому досягається висока герметичність і довговічність покриття.</p>
+            `;
+
+        // Render recommended products
+        const recommendedProducts = document.getElementById(
+          "recommended-products"
+        );
+        const allProducts = Object.values(categories).flatMap(
+          (cat) => cat.products
+        );
+        const filteredProducts = allProducts
+          .filter((p) => p.id !== productId)
+          .slice(0, 4);
+        recommendedProducts.innerHTML = filteredProducts
+          .map(
+            (p) => `
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('${p.image}');"></div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-bold text-slate-900 mb-2">${p.name}</h4>
+              <p class="text-gray-600 text-sm mb-2">${p.price}</p>
+              <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors w-full">
+                Замовити
+              </button>
+            </div>
+          </div>
+        `
+          )
+          .join("");
+
+        // Modal toggle
+        const modal = document.getElementById("order-modal");
+        const closeModalButton = document.getElementById("close-modal");
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach((button) => {
+          button.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.classList.remove("hidden");
+          });
+        });
+
+        closeModalButton.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", initPage);
+    </script>
+  </body>
+</html>

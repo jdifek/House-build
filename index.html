@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House-build - Головна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-slate-900 text-white">
+      <div class="bg-slate-800 py-2 px-4">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <div
+            class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-2 md:space-y-0"
+          >
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-phone w-4 h-4 text-orange-500"></i>
+              <span>+38 (067) 464 88 13</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt w-4 h-4 text-orange-500"></i>
+              <span>Київ, вул. Латошинського 4а/289</span>
+            </div>
+          </div>
+          <div class="mt-2 md:mt-0">
+            <span class="text-gray-300">Працюємо: Пн-Пт 8:00-18:00</span>
+          </div>
+        </div>
+      </div>
+      <nav class="px-4 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <div class="text-2xl font-bold">House-build</div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors"
+            >
+              Магазин
+            </button>
+          </div>
+          <button id="mobile-menu-button" class="md:hidden p-2">
+            <i id="menu-icon" class="fas fa-bars w-6 h-6"></i>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-slate-700"
+        >
+          <div class="flex flex-col space-y-4 pt-4">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors w-fit"
+            >
+              Магазин
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="relative min-h-screen bg-gradient-to-r from-slate-900 to-slate-800 text-white overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image: url('https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              Надійні рішення з металу для вашого
+              <span class="text-orange-500"> бізнесу та будівництва</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+              Високоякісні металеві вироби для промисловості, будівництва та
+              інженерії.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+              <button
+                class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              >
+                Оформити замовлення
+                <i class="fas fa-arrow-right ml-2 w-5 h-5"></i>
+              </button>
+              <button
+                class="border border-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
+              >
+                Розрахувати вартість
+              </button>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300"
+              >
+                <i
+                  class="fas text-3xl fa-check-circle w-12 h-12 text-green-500 mb-4"
+                ></i>
+                <h3 class="text-xl font-semibold mb-2">Висока якість</h3>
+                <p class="text-gray-300">
+                  Якісні металеві вироби зі сертифікованої сировини
+                </p>
+              </div>
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300"
+              >
+                <i
+                  class="fas text-3xl fa-cogs w-12 h-12 text-blue-500 mb-4"
+                ></i>
+                <h3 class="text-xl font-semibold mb-2">
+                  Індивідуальні рішення
+                </h3>
+                <p class="text-gray-300">
+                  Виготовляємо як типові, так і унікальні замовлення
+                </p>
+              </div>
+              <div
+                class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all duration-300 md:col-span-2"
+              >
+                <i
+                  class="fas text-3xl fa-clock w-12 h-12 text-yellow-500 mb-4"
+                ></i>
+                <h3 class="text-xl font-semibold mb-2">Дотримання термінів</h3>
+                <p class="text-gray-300">Точні терміни, якість і надійність</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">
+            Працюємо з турботою про кожного клієнта
+          </h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Завдяки якості виробів і персональному підходу ми здобули довіру як
+            локальних, так і міжнародних компаній.
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div>
+            <h3 class="text-3xl font-bold text-slate-900 mb-6">
+              House-build — наша справа з 1999 року
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Наша компанія — це виробниче підприємство з багаторічним досвідом,
+              яке пропонує якісну металопродукцію та повний комплекс послуг.
+            </p>
+            <a
+              href="about.html"
+              class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >Детальніше про нас</a
+            >
+          </div>
+          <div
+            class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white"
+          >
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <i
+                  class="fas fa-award text-orange-500 text-6xl mx-auto mb-4"
+                ></i>
+                <div class="text-2xl font-bold mb-2">25+</div>
+                <div class="text-gray-300">Років досвіду</div>
+              </div>
+              <div class="text-center">
+                <i
+                  class="fas fa-users text-green-500 text-6xl mx-auto mb-4"
+                ></i>
+                <div class="text-2xl font-bold mb-2">500+</div>
+                <div class="text-gray-300">Задоволених клієнтів</div>
+              </div>
+              <div class="text-center">
+                <i
+                  class="fas fa-wrench text-blue-500 text-6xl mx-auto mb-4"
+                ></i>
+                <div class="text-2xl font-bold mb-2">1000+</div>
+                <div class="text-gray-300">Реалізованих проєктів</div>
+              </div>
+              <div class="text-center">
+                <i
+                  class="fas fa-chart-line text-yellow-500 text-6xl mx-auto mb-4"
+                ></i>
+                <div class="text-2xl font-bold mb-2">98%</div>
+                <div class="text-gray-300">Якість виконання</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">Наші послуги</h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ми пропонуємо повний спектр будівельних послуг від проектування до
+            здачі об'єкта під ключ
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas text-3xl fa-home w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Будівництво під ключ
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Повний цикл від проекту до здачі об'єкта
+              </p>
+              <a
+                href="construction.html"
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full inline-block text-center"
+                >Докладніше</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas text-3xl fa-tools w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Ремонтні роботи
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Капітальний та косметичний ремонт
+              </p>
+              <a
+                href="services.html"
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full inline-block text-center"
+                >Докладніше</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fas text-3xl fa-drafting-compass w-8 h-8 text-white"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Проектування
+              </h3>
+              <p class="text-gray-600 mb-6">Розробка архітектурних рішень</p>
+              <a
+                href="services.html"
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full inline-block text-center"
+                >Докладніше</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">
+            Хітові товари та категорії
+          </h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Широкий асортимент високоякісних будівельних матеріалів
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="h-64 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-300"
+              style="
+                background-image: url('https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop');
+              "
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-bold mb-2">Металочерепиця</h3>
+              <p class="text-gray-200 text-sm">
+                Високоякісна металочерепиця різних профілів
+              </p>
+            </div>
+            <a
+              href="categories.html?category=metal-tile"
+              class="absolute inset-0"
+            ></a>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="h-64 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-300"
+              style="
+                background-image: url('https://images.pexels.com/photos/5792615/pexels-photo-5792615.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop');
+              "
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-bold mb-2">Профнастил</h3>
+              <p class="text-gray-200 text-sm">
+                Стіновий та покрівельний профнастил
+              </p>
+            </div>
+            <a
+              href="categories.html?category=profile-sheet"
+              class="absolute inset-0"
+            ></a>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="h-64 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-300"
+              style="
+                background-image: url('https://images.pexels.com/photos/5792678/pexels-photo-5792678.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop');
+              "
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-xl font-bold mb-2">Фальцева покрівля</h3>
+              <p class="text-gray-200 text-sm">
+                Довговічна та надійна фальцева покрівля
+              </p>
+            </div>
+            <a
+              href="categories.html?category=folding-roof"
+              class="absolute inset-0"
+            ></a>
+          </div>
+        </div>
+        <div class="text-center">
+          <a
+            href="categories.html"
+            class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+            >Переглянути весь каталог</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">
+            Реалізовані проєкти
+          </h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Галерея наших найкращих робіт
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <div
+                class="h-64 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-300"
+                style="
+                  background-image: url('https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop');
+                "
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                2024
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">
+                Складський комплекс
+              </h3>
+              <p class="text-gray-600 mb-4">Сучасний складський комплекс</p>
+              <div class="space-y-2">
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-map-pin w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Київ</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-users w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Площа: 800 м²</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-calendar w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Термін: 6 місяців</span>
+                </div>
+              </div>
+              <button
+                class="mt-4 bg-slate-900 hover:bg-slate-800 text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
+              >
+                Детальніше
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <div
+                class="h-64 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-300"
+                style="
+                  background-image: url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop');
+                "
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
+              >
+                2023
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">
+                Житловий будинок
+              </h3>
+              <p class="text-gray-600 mb-4">Сучасний житловий будинок</p>
+              <div class="space-y-2">
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-map-pin w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Одеса</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-users w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Площа: 250 м²</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-calendar w-4 h-4 text-orange-500 mr-2"></i>
+                  <span class="text-sm">Термін: 8 місяців</span>
+                </div>
+              </div>
+              <button
+                class="mt-4 bg-slate-900 hover:bg-slate-800 text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
+              >
+                Детальніше
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">
+            Відгуки клієнтів
+          </h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Довіра наших клієнтів - найкраща оцінка
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 relative"
+          >
+            <i
+              class="fas fa-quote-right absolute top-4 right-4 w-8 h-8 text-orange-200"
+            ></i>
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop&crop=face"
+                alt="Олександр Коваленко"
+                class="w-16 h-16 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-bold text-slate-900">Олександр Коваленко</h4>
+                <p class="text-gray-600 text-sm">Директор ТОВ "БудІнвест"</p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+            </div>
+            <p class="text-gray-700 italic">
+              "Відмінна якість матеріалів і швидке виконання замовлення."
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 relative"
+          >
+            <i
+              class="fas fa-quote-right absolute top-4 right-4 w-8 h-8 text-orange-200"
+            ></i>
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop&crop=face"
+                alt="Марина Петренко"
+                class="w-16 h-16 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-bold text-slate-900">Марина Петренко</h4>
+                <p class="text-gray-600 text-sm">Власник приватного будинку</p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+            </div>
+            <p class="text-gray-700 italic">
+              "Професійний підхід і доступні ціни."
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 relative"
+          >
+            <i
+              class="fas fa-quote-right absolute top-4 right-4 w-8 h-8 text-orange-200"
+            ></i>
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop&crop=face"
+                alt="Дмитро Іваненко"
+                class="w-16 h-16 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-bold text-slate-900">Дмитро Іваненко</h4>
+                <p class="text-gray-600 text-sm">Керівник проекту</p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+              <i class="fas fa-star w-5 h-5 text-yellow-400 fill-current"></i>
+            </div>
+            <p class="text-gray-700 italic">
+              "Будівництво пройшло без затримок."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold mb-4">House-build</div>
+            <p class="text-gray-300 mt-4 mb-6">
+              Професійне будівництво та продаж матеріалів з 1999 року.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 ml-1 fa-facebook-f w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 fa-instagram w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-2 fa-linkedin-in w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Послуги</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="construction.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Будівництво під ключ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Ремонтні роботи</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Проектування</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Матеріали</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="categories.html?category=metal-tile"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Металочерепиця</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html?category=profile-sheet"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Профнастил</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html?category=folding-roof"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Фальцева покрівля</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Контакти</h3>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone w-5 h-5 text-orange-500"></i>
+                <div>
+                  <p class="text-gray-300">+38 (067) 464 88 13</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope w-5 h-5 text-orange-500"></i>
+                <p class="text-gray-300">info@house-build.com.ua</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fas fa-map-marker-alt w-5 h-5 text-orange-500 mt-1"
+                ></i>
+                <p class="text-gray-300">Київ, вул. Латошинського 4а/289</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2024 House-build Company. Всі права захищені.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Політика конфіденційності</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Умови використання</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", () => {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuIcon = document.getElementById("menu-icon");
+          mobileMenu.classList.toggle("hidden");
+          menuIcon.classList.toggle("fa-bars");
+          menuIcon.classList.toggle("fa-times");
+        });
+    </script>
+  </body>
+</html>

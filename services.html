@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House-build - Послуги</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-slate-900 text-white">
+      <div class="bg-slate-800 py-2 px-4">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <div
+            class="flex flex-col md:flex-row items-center space-x-0 md:space-x-6 space-y-2 md:space-y-0"
+          >
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-phone w-4 h-4 text-orange-500"></i>
+              <span>+38 (067) 464 88 13</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt w-4 h-4 text-orange-500"></i>
+              <span>Київ, вул. Латошинського 4а/289</span>
+            </div>
+          </div>
+          <div class="mt-2 md:mt-0">
+            <span class="text-gray-300">Працюємо: Пн-Пт 8:00-18:00</span>
+          </div>
+        </div>
+      </div>
+      <nav class="px-4 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <div class="text-2xl font-bold">House-build</div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors"
+            >
+              Магазин
+            </button>
+          </div>
+          <button id="mobile-menu-button" class="md:hidden p-2">
+            <i id="menu-icon" class="fas fa-bars w-6 h-6"></i>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-slate-700"
+        >
+          <div class="flex flex-col space-y-4 pt-4">
+            <a href="index.html" class="hover:text-orange-500 transition-colors"
+              >Головна</a
+            >
+            <a href="about.html" class="hover:text-orange-500 transition-colors"
+              >Про нас</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-orange-500 transition-colors"
+              >Послуги</a
+            >
+            <a
+              href="categories.html"
+              class="hover:text-orange-500 transition-colors"
+              >Матеріали</a
+            >
+            <a
+              href="construction.html"
+              class="hover:text-orange-500 transition-colors"
+              >Будівництво</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-orange-500 transition-colors"
+              >Контакти</a
+            >
+            <button
+              class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg transition-colors w-fit"
+            >
+              Магазин
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">Наші послуги</h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ми пропонуємо повний спектр будівельних послуг від проектування до
+            здачі об'єкта під ключ
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas text-3xl fa-home w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Будівництво під ключ
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Повний цикл від проекту до здачі об'єкта
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Проектування
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Фундамент
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Стіни і покрівля
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Внутрішні роботи
+                </li>
+              </ul>
+              <a
+                href="construction.html"
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full inline-block text-center"
+                >Докладніше</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i class="fas text-3xl fa-tools w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Ремонтні роботи
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Капітальний та косметичний ремонт
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Дизайн проект
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Ремонт квартир
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Офісні приміщення
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Фасадні роботи
+                </li>
+              </ul>
+              <button
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full"
+              >
+                Докладніше
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="p-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fas text-3xl fa-drafting-compass w-8 h-8 text-white"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Проектування
+              </h3>
+              <p class="text-gray-600 mb-6">Розробка архітектурних рішень</p>
+              <ul class="space-y-2">
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Архітектура
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Конструкції
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  Інженерні мережі
+                </li>
+                <li class="flex items-center text-gray-700">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                  3D візуалізація
+                </li>
+              </ul>
+              <button
+                class="mt-6 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full"
+              >
+                Докладніше
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold mb-4">House-build</div>
+            <p class="text-gray-300 mt-4 mb-6">
+              Професійне будівництво та продаж матеріалів з 1999 року.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 ml-1 fa-facebook-f w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-3 fa-instagram w-5 h-5"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab text-2xl mb-2 fa-linkedin-in w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Послуги</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="construction.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Будівництво під ключ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Ремонтні роботи</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Проектування</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Матеріали</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="categories.html?category=metal-tile"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Металочерепиця</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html?category=profile-sheet"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Профнастил</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html?category=folding-roof"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  >Фальцева покрівля</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Контакти</h3>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone w-5 h-5 text-orange-500"></i>
+                <div>
+                  <p class="text-gray-300">+38 (067) 464 88 13</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope w-5 h-5 text-orange-500"></i>
+                <p class="text-gray-300">info@house-build.com.ua</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fas fa-map-marker-alt w-5 h-5 text-orange-500 mt-1"
+                ></i>
+                <p class="text-gray-300">Київ, вул. Латошинського 4а/289</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2024 House-build Company. Всі права захищені.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Політика конфіденційності</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-sm transition-colors"
+              >Умови використання</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", () => {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuIcon = document.getElementById("menu-icon");
+          mobileMenu.classList.toggle("hidden");
+          menuIcon.classList.toggle("fa-bars");
+          menuIcon.classList.toggle("fa-times");
+        });
+    </script>
+  </body>
+</html>
