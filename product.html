@@ -598,84 +598,93 @@
 
         // Render product
         const productContent = document.getElementById("product-content");
-        productContent.innerHTML = `
-          <div class="bg-white overflow-hidden">
-            <div class="h-96 bg-cover bg-center" style="background-image: url('${
-              product.image
-            }');"></div>
-            <div class="p-6">
-              ${
-                product.dimensions
-                  ? `
-                <div class="mb-6">
-                  <h3 class="text-xl font-bold text-slate-900 mb-2">Розміри</h3>
-                  ${product.dimensions
-                    .map(
-                      (dim) => `
-                    <div class="flex items-center space-x-4 mb-2">
-                      <svg class="w-full h-24" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="50" y1="250" x2="750" y2="250" stroke="black" stroke-width="2"/>
-                      <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>
-                      <line x1="750" y1="250" x2="750" y2="50" stroke="black" stroke-width="2"/>
-                      <text x="400" y="270" text-anchor="middle" font-size="14">${dim.length} мм</text>
-                      <text x="30" y="150" text-anchor="end" font-size="14">${dim.width} мм</text>
-                      <text x="770" y="150" text-anchor="start" font-size="14">${dim.height} мм</text>
-                      </svg>
-                    </div>
-                  `
-                    )
-                    .join("")}
-                </div>
-              `
-                  : ""
-              }
-              
-            </div>
-          </div>
-          <div class="bg-white  p-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">${
-              product.name
-            }</h2>
-            <p class="text-gray-600 text-lg mb-6">${product.description}</p>
-            <p class="text-2xl font-bold text-orange-500 mb-6">${
-              product.price
-            }</p>
-            
-            <div class="flex space-x-4 mb-4">
-              <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 add-to-cart">
-                <i class="fas fa-shopping-cart w-5 h-5"></i>
-                <span>Замовити</span>
-              </button>
-              
-              <button class="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2">
-                <i class="fas fa-info-circle w-5 h-5"></i>
-                <span>Детальніше</span>
-              </button>
-            </div>
-             <div class="flex space-x-2">
-              <div class="mb-6">
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Палітра кольорів</h3>
-                  ${
-                    product.colors
-                      ? product.colors
-                          .map(
-                            (color) => `
-                    <button class="w-8 h-8 rounded-full ${color} border-2 border-white hover:border-orange-500 transition-colors"></button>
-                  `
-                          )
-                          .join("")
-                      : ""
-                  }
+     // Inside the initPage function, update productContent.innerHTML (unchanged from your original)
+productContent.innerHTML = `
+  <div class="bg-white overflow-hidden">
+    <div class="h-96 bg-cover bg-center" style="background-image: url('${product.image}');"></div>
+    <div class="p-6">
+      ${
+        product.dimensions
+          ? `
+        <div class="mb-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Розміри</h3>
+          ${product.dimensions
+            .map(
+              (dim) => `
+              <div class="flex items-center space-x-4 mb-2">
+                <svg class="w-full h-24" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="50" y1="250" x2="750" y2="250" stroke="black" stroke-width="2"/>
+                  <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>
+                  <line x1="750" y1="250" x2="750" y2="50" stroke="black" stroke-width="2"/>
+                  <text x="400" y="270" text-anchor="middle" font-size="14">${dim.length} мм</text>
+                  <text x="30" y="150" text-anchor="end" font-size="14">${dim.width} мм</text>
+                  <text x="770" y="150" text-anchor="start" font-size="14">${dim.height} мм</text>
+                </svg>
               </div>
-               
-                </div>
-        
-            </div>
+            `
+            )
+            .join("")}
+        </div>
+      `
+          : ""
+      }
+    </div>
+  </div>
+  <div class="bg-white p-8">
+    <h2 class="text-3xl font-bold text-slate-900 mb-4">${product.name}</h2>
+    <p class="text-gray-600 text-lg mb-6">${product.description}</p>
+    <p class="text-2xl font-bold text-orange-500 mb-6">${product.price}</p>
+    
+    <div class="flex space-x-4 mb-4">
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 add-to-cart">
+        <i class="fas fa-shopping-cart w-5 h-5"></i>
+        <span>Замовити</span>
+      </button>
+      <button class="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2">
+        <i class="fas fa-info-circle w-5 h-5"></i>
+        <span>Детальніше</span>
+      </button>
+    </div>
+    <div class="flex space-x-2">
+      <div class="mb-6">
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Палітра кольорів</h3>
+        ${
+          product.colors
+            ? product.colors
+                .map(
+                  (color) => `
+                <button class="w-8 h-8 rounded-full ${color} border-2 border-white hover:border-orange-500 transition-colors"></button>
+              `
+                )
+                .join("")
+            : ""
+        }
+      </div>
+    </div>
+    <h3 class="text-xl font-bold text-slate-900">Опис продукту</h3>
+    <p class="text-gray-600 text-m col-span-2">Вона складається з металевых листвiв певної ширини, якi з'єднуються за допомогою спеціального інструменту. Завдяки цьому досягається висока герметичність і довговічність покриття.</p>
+  </div>
+`;
 
-            <h3 class="text-xl font-bold text-slate-900 ">Опис продукту</h3>
-            <p class="text-gray-600 text-m col-span-2">Вона складається з металевых листвiв певної ширини, якi з'єднуються за допомогою спеціального інструменту. Завдяки цьому досягається висока герметичність і довговічність покриття.</p>
-            `;
-
+// Add the style tag to the document head (only needs to be added once)
+const style = document.createElement("style");
+style.textContent = `
+  #product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Matches Tailwind's gap-12 */
+  }
+  @media (min-width: 1024px) {
+    #product-content {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    #product-content > div {
+      flex: 1; /* Equal width for both sections */
+    }
+  }
+`;
+document.head.appendChild(style);
         // Render recommended products
         const recommendedProducts = document.getElementById(
           "recommended-products"
